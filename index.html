@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Quiz</title>
+    <style>
+        .quiz-container {
+            position: relative;
+            height: 200px;
+            background-color: cornsilk;
+            width:100%;
+     }
+        .button-container{
+            text-align: center;
+
+        }
+        #quiz{
+            position: relative;
+            text-emphasis: bold;
+            font-size: 1.3em;
+            margin-left: 40px;
+        }
+        h1,h3{
+            text-align: center;
+        }
+
+        #submit,
+        #previous,
+        #next,#try {
+            background-color: lightblue;
+            margin-top: 30px;
+            padding: 10px;
+            text-emphasis: bold;
+            font-size: 1em;
+        }
+
+        .slide {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .active-slide {
+            opacity: 1;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>     
+      <h1>JavaScript Quiz</h1>
+       <h3 id="questionNumber"></h3>
+    <div class="quiz-container">
+        <div id="quiz"></div>
+    </div>
+    <div class="button-container">
+    <button id="previous">Previous</button>
+    <button id="next">Next</button>
+    <button id="submit">Submit</button>
+    <button id="try">Try Again</button>
+</div>
+    <div id="result"></div>
+    <script src="app.js"></script>
+</body>
+
+</html>
